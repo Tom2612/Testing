@@ -1,4 +1,4 @@
-const { sum, checkCapital, reverseString } = require('./app');
+const { sum, checkCapital, reverseString } = require('./sum');
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
