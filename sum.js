@@ -52,6 +52,12 @@ function caesarCipher(string) {
 };
 
 function analyzeArray(array) {
+    return object = {
+        average: array.reduce((prev, current) => (prev + current)) / array.length,
+        min: array.reduce ((prev, current) => current < prev ? current : prev),
+        max: array.reduce((prev, current) => current > prev ? current : prev),
+        length: array.length
+    }
+};
 
-}
-module.exports = { sum, checkCapital, reverseString, calculator, caesarCipher }
+module.exports = { sum, checkCapital, reverseString, calculator, caesarCipher, analyzeArray }
