@@ -42,6 +42,8 @@ function caesarCipher(string) {
             newArr.push(97);
         } else if (value == 90) {
             newArr.push(65);
+        } else if (value < 65 || value > 122) {
+            newArr.push(value);
         } else {
             newArr.push(value + 1);
         }
