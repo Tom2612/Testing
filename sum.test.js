@@ -66,3 +66,6 @@ test('CaesarCipher: capital Z', () => {
 test('CaesarCipher: message', () => {
     expect(caesarCipher('Hello you')).toBe('Ifmmp!zpv');
 });
+test('CaesarCipher: complex', () => {
+    expect(caesarCipher('Zestiness is bestez!')).toBe('Aftujoftt jt cftufa!');
+});
