@@ -40,4 +40,4 @@ function caesarCipher(string) {
 function analyzeArray(array) {
 
 }
-module.exports = { sum, checkCapital, reverseString }
+module.exports = { sum, checkCapital, reverseString, calculator }
