@@ -1,4 +1,4 @@
-const { sum, checkCapital, reverseString, calculator } = require('./sum');
+const { sum, checkCapital, reverseString, calculator, caesarCipher } = require('./sum');
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
@@ -46,4 +46,23 @@ test('calculator: mul', () => {
 });
 test('calculator: div', () => {
     expect(calculator.div(6, 2)).toBe(3);
+});
+
+test('CaesarCipher test (1)', () => {
+    expect(caesarCipher('cat')).toBe('dbu');
+});
+test('CaesarCipher test (2)', () => {
+    expect(caesarCipher('dog')).toBe('eph');
+});
+test('CaesarCipher: capitals', () => {
+    expect(caesarCipher('Cat')).toBe('Dbu');
+});
+test('CaesarCipher: z', () => {
+    expect(caesarCipher('zero')).toBe('afsp');
+});
+test('CaesarCipher: capital Z', () => {
+    expect(caesarCipher('Zero')).toBe('Afsp');
+});
+test('CaesarCipher: message', () => {
+    expect(caesarCipher('Hello you')).toBe('Ifmmp!zpv');
 });
