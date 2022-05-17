@@ -9,11 +9,11 @@ function checkCapital(string) {
 }
 
 function reverseString(string) {
-
+    return string.trim().split('').reverse().join('');
 }
 
 function calculator() {
-
+    
 }
 
 function caesarCipher(string) {
@@ -23,4 +23,4 @@ function caesarCipher(string) {
 function analyzeArray(array) {
 
 }
-module.exports = { sum, checkCapital }
+module.exports = { sum, checkCapital, reverseString }
