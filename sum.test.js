@@ -1,9 +1,11 @@
-const { sum, checkCapital, reverseString, calculator, caesarCipher } = require('./sum');
+const { sum, checkCapital, reverseString, calculator, caesarCipher, analyzeArray } = require('./sum');
 
+//Simple test for sum
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
 });
 
+//Tests for capitalisation
 test('Is it capitalised?', () => {
     expect(checkCapital('dog')).toBe('Dog');
 });
@@ -20,6 +22,7 @@ test('Is space ignored (2)?', () => {
     expect(checkCapital(' cAT     ')).toBe('Cat');
 });
 
+//Tests for string reversing
 test('reverse string (1)', () => {
     expect(reverseString('home')).toBe('emoh');
 });
@@ -35,6 +38,8 @@ test('reverse multiple word string', () => {
 test('reverse multiple word string with space before', () => {
     expect(reverseString('    cats and dogs')).toBe('sgod dna stac');
 });
+
+//Tests for calculator
 test('calculator: add', () => {
     expect(calculator.add(2, 3)).toBe(5);
 });
@@ -48,6 +53,7 @@ test('calculator: div', () => {
     expect(calculator.div(6, 2)).toBe(3);
 });
 
+//Tests for caesarCipher
 test('CaesarCipher test (1)', () => {
     expect(caesarCipher('cat')).toBe('dbu');
 });
@@ -68,4 +74,30 @@ test('CaesarCipher: message', () => {
 });
 test('CaesarCipher: complex', () => {
     expect(caesarCipher('Zestiness is bestez!')).toBe('Aftujoftt jt cftufa!');
+});
+
+//Tests for arrayAnalyser
+test('Analyzer', () => {
+    expect(analyzeArray([1,8,3,4,2,6])).toStrictEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+    });
+});
+test('return object', () => {
+    expect(analyzeArray([2, 4, 6])).toStrictEqual({
+        average: 4,
+        min: 2,
+        max: 6,
+        length: 3
+    });
+});
+test('reversed array', () => {
+    expect(analyzeArray([6, 4, 2])).toStrictEqual({
+        average: 4,
+        min: 2,
+        max: 6,
+        length: 3
+    });
 });
