@@ -34,10 +34,22 @@ const calculator = {
 // })();
 
 function caesarCipher(string) {
-
-}
+    let map = Array.prototype.map;
+    let newArr = [];
+    let arr = map.call(string, (x) => x.charCodeAt(0));
+    for (let value of arr) {
+        if (value == 122) {
+            newArr.push(97);
+        } else if (value == 90) {
+            newArr.push(65);
+        } else {
+            newArr.push(value + 1);
+        }
+    }
+    return String.fromCharCode(...newArr);
+};
 
 function analyzeArray(array) {
 
 }
-module.exports = { sum, checkCapital, reverseString, calculator }
+module.exports = { sum, checkCapital, reverseString, calculator, caesarCipher }
