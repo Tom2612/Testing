@@ -12,9 +12,26 @@ function reverseString(string) {
     return string.trim().split('').reverse().join('');
 }
 
-function calculator() {
-    
-}
+const calculator = {
+    add: (a, b) => a + b,
+    sub: (a, b) => a - b,
+    mul: (a, b) => a * b,
+    div: (a, b) => a / b
+};
+
+//Using Module pattern
+// const calculator = (() => {
+//     const add = (a, b) => a + b;
+//     const sub = (a, b) => a - b;
+//     const mul = (a, b) => a * b;
+//     const div = (a, b) => a / b;
+//     return {
+//     add,
+//     sub,
+//     mul,
+//     div
+// }
+// })();
 
 function caesarCipher(string) {
 
