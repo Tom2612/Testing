@@ -1,4 +1,4 @@
-const { sum, checkCapital } =require('./sum');
+const { sum, checkCapital, reverseString } = require('./app');
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1, 2)).toBe(3);
@@ -18,4 +18,20 @@ test('Is space ignored?', () => {
 });
 test('Is space ignored (2)?', () => {
     expect(checkCapital(' cAT     ')).toBe('Cat');
+});
+
+test('reverse string (1)', () => {
+    expect(reverseString('home')).toBe('emoh');
+});
+test('reverse string (2)', () => {
+    expect(reverseString('cat')).toBe('tac');
+});
+test('reverse string with space', () => {
+    expect(reverseString('    cat    ')).toBe('tac');
+});
+test('reverse multiple word string', () => {
+    expect(reverseString('cats and dogs')).toBe('sgod dna stac');
+});
+test('reverse multiple word string with space before', () => {
+    expect(reverseString('    cats and dogs')).toBe('sgod dna stac');
 });
